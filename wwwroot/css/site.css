@@ -14,468 +14,109 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
-}
-
-/* Colors */
-:root {
-    --light-blue: #566785;
-    --dark-blue: #061623;
-    --teal: #199389;
-    --dark-gray: #CCCCCC;
-    --black-gray: #303030;
-    --blue-gray: #2F3249;
-    --black: #010203;
-    --gold: #D4AF37;
-}
-
-/* Style Reset */
-body, header, main, nav, footer, h1, figure, figcaption {
-    margin: 0;
-    font-family: AquireB;
-    padding: 0;
-    border: 0;
-    max-width: 100%;
-    display: block;
+    margin-bottom: 60px;
+    background-color: black;
     color: white;
-    background-color: var(--dark-gray);
+}
+
+
+/* Nav Bar */
+.text-red {
+    color: #FF2400;
+}
+
+.navbar-brand {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2em; /* Adjust as needed */
+}
+
+/*Office Hour Form*/
+#office-hour-form {
+    background-color: rgba(19,44,42,.9);
+    color: white;
+    border-radius: 10px;
     text-align: center;
-}
-
-p, li, dd, td {
-    font-family: Futara, serif;
-    font-size: 110%;
-}
-
-main, h1, figure, figcaption {
-    background-color: var(--dark-blue);
-}
-
-hr {
-    height: 1px;
-    background-color: var(--gold);
-    border: none;
-}
-
-main .fa {
-    margin-right: 10px;
     padding: 10px;
-    font-size: 30px;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
 }
 
-    main .fa:hover {
-        background-color: var(--gold);
-    }
-
-.fa-facebook {
-    background: white;
-    color: var(--black);
-}
-
-.fa-twitter {
-    background: white;
-    color: var(--black);
-}
-
-.fa-youtube {
-    background: white;
-    color: var(--black);
-}
-
-.fa-instagram {
-    background: white;
-    color: var(--black);
-}
-
-#booking p {
-    text-align: center;
-}
-
-#offerings p {
-    text-align: center;
-}
-
-#pricing p {
-    text-align: center;
-}
-
-#experiences p {
-    text-align: center;
-}
-
-#media {
-    height: 70px;
-}
-
-.terms {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-    .terms p {
-        text-align: center;
-    }
-
-#experiences, #offerings {
-    background-color: var(--black-gray);
-}
-
-dt {
-    font-size: 150%
-}
-
-dd {
-    margin-top: 5px;
-    text-align: center;
-    margin-right: 10%;
-    margin-left: 10%;
-}
-
-/*  IMAGE STYLING */
-
-img {
-    margin: 0;
-    padding: 5px;
-    border: 0;
-}
-
-.image-center1 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 250px;
-}
-
-.image-center2 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 700px;
-}
-
-.icon-center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#Imgscale {
-    width: 200px;
-    border-radius: 10%;
-}
-
-.image-header {
-    display: block;
-    height: 60px;
-    margin: 0px;
-    padding: 0px;
-}
-
-.image-footer {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70px;
+#office-hour-form div{
+    padding: 10px;
 }
 
 button {
     border: none;
-    color: var(--dark-blue);
+    color: black;
     text-align: center;
-    padding: 14px 16px;
-    font-family: Aquire;
+    padding: 10px;
     text-decoration: none;
     font-size: 17px;
     border-radius: 25px;
 }
 
     button:hover {
-        color: var(--dark-blue);
-        background-color: var(--gold);
+        color: white;
+        background-color: #f6c947;
         border-radius: 25px;
     }
 
-.topnav {
-    padding-top: 15px;
-    overflow: hidden;
-    font-family: Aquire;
-    background-color: var(--dark-gray);
-}
-
-    .topnav a {
-        float: left;
-        display: block;
-        color: var(--black-gray);
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        height: 45px;
-        margin-top: 8px;
-    }
-
-        .topnav a:hover {
-            color: var(--gold);
-            background-color: var(--dark-blue);
-            border-radius: 50px;
-        }
-
-        .topnav a.active {
-            background-color: var(--black-gray);
-            color: var(--dark-gray);
-            border-radius: 25px;
-        }
-
-    .topnav .icon {
-        z-index: 3;
-        margin-top: 5px;
-        margin-right: 5px;
-        border-radius: 50%;
-        background-color: var(--black-gray);
-        color: var(--dark-gray);
-        display: none;
-    }
-
-    .topnav .logo {
-        margin-top: 0px;
-        margin-left: 5px;
-        padding: 0px;
-        height: 60px;
-        width: 60px;
-    }
-
-.grid-container {
-    display: grid;
-    grid-template-columns: auto;
-}
-
-form {
-    padding: 20px;
-    margin: 20px;
-    border: 1px solid #2C3E50;
+input {
     border-radius: 10px;
-    background-color: var(--dark-gray);
 }
 
-label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: black;
+#name, #email {
+    width: 200px;
 }
 
-input[type=text], input[type=email] {
+h1{
+    text-align: center;
+}
+
+#moveRight{
+    padding-left: 40px
+}
+
+table, th, td {
+    border: 1px solid;
+    border-color: white;
+    padding: 5px;
+    font-size: 1.1em;
+}
+
+#column1{
+    width: 190px;
+}
+
+#column2{
+    width: 85%;
+}
+
+#corley {
+    background-image: url("/images/Corley-Hall-1000.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #cccccc;
+}
+
+li{
+    list-style-type: none;
+}
+
+#upcoming-hours li {
+    background-color: rgba(19,44,42,.9);
+    color: white;
+    border-radius: 10px;
     padding: 10px;
     margin-top: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
 }
 
-section {
-    margin-left: auto;
-    margin-right: auto;
+/* Search Bar */
+#searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-    section p {
-        text-align: left;
-    }
-
-h1 {
-    font-family: Aquire;
-    text-shadow: 0px 0px 13px #00B7D4;
-    color: white;
-}
-
-ul {
-    text-align: center;
-    padding-right: 40px;
-}
-
-li {
-    margin-top: 10px;
-    list-style: none;
-}
-
-footer {
-    color: var(--black-gray);
-    padding: 0px 40px 0px 40px;
-}
-
-p {
-    padding: 0px 40px 0px 40px;
-}
-
-/* RESPONSIVE BODY STYLES */
-
-* {
-    box-sizing: border-box;
-}
-
-/* unvisited link */
-.link:link {
-    color: var(--dark-blue);
-    text-decoration: none;
-}
-
-/* visited link */
-.link:visited {
-    color: var(--dark-blue);
-    text-decoration: none;
-}
-
-/* mouse over link */
-.link:hover {
-    color: var(--gold);
-    text-decoration: none;
-}
-
-/* selected link */
-.link:active {
-    color: var(--dark-blue);
-    text-decoration: none;
-}
-
-@media screen and (max-width: 1179px) {
-
-    #experiences p {
-        text-align: left;
-    }
-
-    #pricing p {
-        text-align: left;
-    }
-
-    .terms p {
-        text-align: left;
-    }
-
-    #offerings p {
-        text-align: left;
-    }
-
-    #booking p {
-        text-align: left;
-    }
-
-    li {
-        text-align: left;
-    }
-
-    dd {
-        text-align: left;
-    }
-
-    .topnav a:not(:first-child) {
-        display: none;
-    }
-
-    .topnav a.icon {
-        float: right;
-        display: block;
-    }
-}
-
-@media screen and (max-width: 1179px) {
-    .topnav.responsive {
-        position: relative;
-    }
-
-        .topnav.responsive .icon {
-            z-index: 3;
-            position: absolute;
-            right: 0;
-            top: 0;
-            margin-top: 15px;
-        }
-
-        .topnav.responsive a {
-            float: none;
-            display: block;
-            text-align: left;
-        }
-}
-
-.container {
-    position: relative;
-}
-
-.mySlides {
-    display: none;
-}
-
-.cursor {
-    cursor: pointer;
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-.prev {
-    left: 0;
-    border-radius: 3px 3px 0 0;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-    .prev:hover,
-    .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.column {
-    float: left;
-    width: 16.66%;
-}
-
-/*Table design*/
-table {
-    border-collapse: collapse;
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-td {
-    padding: 10px;
-    border: 1px solid var(--gold);
+#searchBar input {
+    width: 200px; /* Adjust as needed */
 }

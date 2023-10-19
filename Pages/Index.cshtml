@@ -4,9 +4,9 @@
     ViewData["Title"] = "Home page";
 }
 
-<body>
+<body id="corley">
     <header>
-        <h1>Office Hours Tracker</h1>
+        <h1>Meeting Scheduling Form</h1>
     </header>
 <main>
     <section id="office-hour-form">
@@ -18,7 +18,7 @@
                 </div>
                 <div>
                     <label for="email">Email: (required)</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email atu.edu" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your atu.edu email" required>
                 </div>
                 <div>
                     <label for="professor">Select a Professor: (required)</label>
@@ -35,7 +35,15 @@
                     <input type="date" id="start-date" name="start-date" required>
                 </div>
                 <div>
-                    <label for="message">Message:</label>
+                    <label for="meeting-type">Select a Meeting Type: (required)</label>
+                    <input type="checkbox" id="inperson" name="inperson" value="In-Person" checked>
+                    <label for="inperson"> In-Person</label>
+                    <input type="checkbox" id="virtual" name="virtual" value="Virtual">
+                    <label for="virtual"> Virtual</label>
+
+                </div>
+                <div>
+                    <label for="message">Message:</label><br />
                     <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message"></textarea>
                 </div>
                 <button type="submit">Submit</button>

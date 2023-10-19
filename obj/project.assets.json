@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Braden Prather\\source\\repos\\MyCoreApp\\MyCoreApp.csproj",
+      "projectUniqueName": "C:\\Users\\Braden Prather\\Source\\Repos\\YellowTeam2023\\Test-app\\MyCoreApp.csproj",
       "projectName": "MyCoreApp",
-      "projectPath": "C:\\Users\\Braden Prather\\source\\repos\\MyCoreApp\\MyCoreApp.csproj",
+      "projectPath": "C:\\Users\\Braden Prather\\Source\\Repos\\YellowTeam2023\\Test-app\\MyCoreApp.csproj",
       "packagesPath": "C:\\Users\\Braden Prather\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Braden Prather\\source\\repos\\MyCoreApp\\obj\\",
+      "outputPath": "C:\\Users\\Braden Prather\\Source\\Repos\\YellowTeam2023\\Test-app\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
