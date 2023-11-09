@@ -5,7 +5,12 @@
 }
 <body id="corley">
 	<h1>@ViewData["Title"]</h1>
-
+    <div id="searchBar">
+        <form action="phpSearch.php" method="post">
+            Search <input type="text" name="search"><br>
+            <input type="submit">
+        </form>
+    </div>
     <section id="upcoming-hours">
         <ul>
 		    <li>

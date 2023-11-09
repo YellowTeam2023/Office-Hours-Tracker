@@ -36,32 +36,10 @@ body {
     color: white;
     border-radius: 10px;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }
 
-#office-hour-form div{
-    padding: 10px;
-}
 
-button {
-    border: none;
-    color: black;
-    text-align: center;
-    padding: 10px;
-    text-decoration: none;
-    font-size: 17px;
-    border-radius: 25px;
-}
-
-    button:hover {
-        color: white;
-        background-color: #f6c947;
-        border-radius: 25px;
-    }
-
-input {
-    border-radius: 10px;
-}
 
 #name, #email {
     width: 200px;
@@ -113,10 +91,36 @@ li{
 /* Search Bar */
 #searchBar {
     display: flex;
+    background-color: rgba(19,44,42,.9);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 32px;
+    padding: 10px 10px 10px 10px;
+}
+
+#searchBar input {
+    width: 500px; /* Adjust as needed */
     justify-content: center;
     align-items: center;
 }
 
-#searchBar input {
-    width: 200px; /* Adjust as needed */
+button {
+    border: none;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 25px;
+}
+
+button:hover {
+    color: white;
+    background-color: #f6c947;
+    border-radius: 25px;
+}
+
+input {
+    border-radius: 10px;
 }
