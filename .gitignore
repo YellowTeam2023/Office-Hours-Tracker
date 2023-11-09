@@ -396,3 +396,17 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/.vs/Test-app/FileContentIndex/42c6bd26-ccf9-4a67-a587-4d87669d81e2.vsidx
+/.vs/slnx.sqlite
+/.vs/Test-app/v17/.wsuo
+/.vs/VSWorkspaceState.json
+/obj/Debug/net6.0/MyCoreApp.assets.cache
+/obj/Debug/net6.0/MyCoreApp.GeneratedMSBuildEditorConfig.editorconfig
+/obj/Release/net6.0/MyCoreApp.assets.cache
+/obj/Release/net6.0/MyCoreApp.GeneratedMSBuildEditorConfig.editorconfig
+/obj/Debug/net6.0/project.razor.vs.json
+/obj/MyCoreApp.csproj.nuget.dgspec.json
+/obj/MyCoreApp.csproj.nuget.g.props
+/obj/project.assets.json
+/obj/project.nuget.cache
+/.vs/Office Hours Scheduler/FileContentIndex/fd2e23eb-e1eb-4070-898c-3a59f8a7e4a4.vsidx
