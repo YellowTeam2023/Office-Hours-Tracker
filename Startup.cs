@@ -11,7 +11,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using MyCoreApp.Models;
 
-namespace AspMySQL
+namespace MyCoreApp
 {
     public class Startup
     {
