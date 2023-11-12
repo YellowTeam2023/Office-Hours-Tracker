@@ -9,7 +9,7 @@ namespace MyCoreApp
         {
             OfficeDatabaseContext context = HttpContext.RequestServices.GetService(typeof(MyCoreApp.Models.OfficeDatabaseContext)) as OfficeDatabaseContext;
 
-            return View(context.GetAllProfessor);
+            return View(context.GetAllProfessor());
         }
     }
 }
