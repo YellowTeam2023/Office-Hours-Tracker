@@ -8,13 +8,13 @@ namespace MyCoreApp.Data
 {
     public class GetOfficeHours
     {
-        public async Task<OfficeHours[]> GetOfficeHoursInfo()
+        public async Task<OfficeHours[]> GetOfficeHoursInfo(String Conn)
         {
             List<OfficeHours> list = new List<OfficeHours>();
             using (MySqlConnection conn = OfficeDatabaseContext.GetConnection())
             {
                 await conn.OpenAsync();
-                using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM officehours", conn))
+                using (MySqlCommand cmd = new MySqlCommand(Conn, conn))
                 {
                     using (MySqlDataReader reader = await cmd.ExecuteReaderAsync())
                     {

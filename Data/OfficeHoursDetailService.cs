@@ -6,10 +6,10 @@ namespace MyCoreApp.Data
     public class OfficeHoursDetailService
     {
         GetOfficeHours objUsers = new GetOfficeHours();
-        public async Task<OfficeHours[]> GetOfficeHoursInfo()
+        public async Task<OfficeHours[]> GetOfficeHoursInfo(String Conn)
         {
             OfficeHours[] ohObj;
-            ohObj = objUsers.GetOfficeHoursInfo().Result.ToArray();
+            ohObj = objUsers.GetOfficeHoursInfo(Conn).Result.ToArray();
             return ohObj;
         }
     }

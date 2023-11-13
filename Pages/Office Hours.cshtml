@@ -10,194 +10,72 @@
     ViewData["Title"] = "Office Hours";
 }
 
-
-<h1>Professor List</h1>
-
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Full Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Office Number</th>
-            <th>Department</th>
-        </tr>
-    </thead>
-    <tbody>
-        @if (Model != null)
-        {
-            @foreach (var professor in ProfessorService.GetProfessorInfo().Result)
-            {
-                <tr>
-                    <td>@professor.ProfessorID</td>
-                    <td>@professor.FName</td>
-                    <td>@professor.LName</td>
-                    <td>@professor.FullName</td>
-                    <td>@professor.Email</td>
-                    <td>@professor.Phone</td>
-                    <td>@professor.OfficeNum</td>
-                    <td>@professor.Department</td>
-                </tr>
-            }
-        }
-        else
-        {
-            <tr>
-                <td colspan="7">No professors found.</td>
-            </tr>
-        }
-    </tbody>
-</table>
-
-
-<h1>OfficeHours List</h1>
-
-<table>
-    <thead>
-        <tr>
-            <th>SlotID</th>
-            <th>ProfessorID</th>
-            <th>DayOfWeek</th>
-            <th>StartTime</th>
-            <th>EndTime</th>
-        </tr>
-    </thead>
-    <tbody>
-        @if (Model != null)
-        {
-            @foreach (var officeHours in OfficeHoursService.GetOfficeHoursInfo().Result)
-            {
-                <tr>
-                    <td>@officeHours.SlotID</td>
-                    <td>@officeHours.ProfessorID</td>
-                    <td>@officeHours.DayOfWeek</td>
-                    <td>@officeHours.StartTime</td>
-                    <td>@officeHours.EndTime</td>
-                </tr>
-            }
-        }
-        else
-        {
-            <tr>
-                <td colspan="7">No professors found.</td>
-            </tr>
-        }
-    </tbody>
-</table>
-
-
-<!--------------------------------------------------------------------------------------------------------------->
-
 <body id="corley">
-	<h1>@ViewData["Title"]</h1>
-    <div id="searchBar">
-        <form action="phpSearch.php" method="post">
-            Search <input type="text" name="search"><br>
-            <input type="submit">
-        </form> 
-    </div>
+
     <section id="upcoming-hours">
         <ul>
-		    <li>
-                <table>
-                    <tr>
-                        <td id="column1"><strong>Instructor:</strong></td>
-                        <td id="column2">Tolga Ensari</td>
-                    </tr>
-                    <tr>
-                        <td id="column1"><strong>Office Hours:</strong></td>
-                        <td id ="column2">Wednesday (10am - 12pm)</td>
-                    </tr>
-                    <tr>
-                        <td id="column1"><strong>Department:</strong></td>
-                        <td id="column2">Computer Science</td>
-                    </tr>
-                    <tr>
-                        <td id="column1"><strong>Room Number:</strong></td>
-                        <td id="column2">241</td>
-                    </tr>
-                    <tr>
-                        <td id="column1"><strong>Contact Info:</strong></td>
-                        <td id="column2">tensari1@atu.edu<br />(479) 356-2161</td>
-                    </tr>
-                </table>
-		    </li>
-		    <li>
-                <table>
-                    <tr>
-                        <td id="column1"><strong>Instructor:</strong></td>
-                        <td id="column2">Bhaskar Ghosh</td>
-                    </tr>
-                    <tr>
-                        <td id="column1"><strong>Office Hours:</strong></td>
-                        <td id="column2">Wednesday (10am - 2pm), Friday (10am - 12pm Virtual Only)</td>
-                    </tr>
-                    <tr>
-                        <td id="column1"><strong>Department:</strong></td>
-                        <td id="column2">Computer Science</td>
-                    </tr>
-                    <tr>
-                        <td id="column1"><strong>Room Number:</strong></td>
-                        <td id="column2">239</td>
-                    </tr>
-                    <tr>
-                        <td id="column1"><strong>Contact Info:</strong></td>
-                        <td id="column2">bghosh@atu.edu<br />(479) 317-7120</td>
-                    </tr>
-                </table>
-            </li>
-            <li>
-                <table>
-                    <tr>
-                        <td id="column1"><strong>Instructor:</strong></td>
-                        <td id="column2">Robin Ghosh</td>
-                    </tr>
-                    <tr>
-                        <td id="column1"><strong>Office Hours:</strong></td>
-                        <td id="column2">Tuesday, Thursday (9:30am - 11am), Wednesday (10am - 11:30am Virtual Only, 1pm - 2:30pm Virtual Only)</td>
-                    </tr>
-                    <tr>
-                        <td id="column1"><strong>Department:</strong></td>
-                        <td id="column2">Computer Science</td>
-                    </tr>
-                    <tr>
-                        <td id="column1"><strong>Room Number:</strong></td>
-                        <td id="column2">231</td>
-                    </tr>
-                    <tr>
-                        <td id="column1"><strong>Contact Info:</strong></td>
-                        <td id="column2">rghosh@atu.edu<br />(479) 964-3252</td>
-                    </tr>
-                </table>
-            </li>
-            <li>
-                <table>
-                    <tr>
-                        <td id="column1"><strong>Instructor:</strong></td>
-                        <td id="column2">Joseph Redding</td>
-                    </tr>
-                    <tr>
-                        <td id="column1"><strong>Office Hours:</strong></td>
-                        <td id="column2">8:00am - 5:00pm By Appointment Only</td>
-                    </tr>
-                    <tr>
-                        <td id="column1"><strong>Department:</strong></td>
-                        <td id="column2">Computer Science</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Room Number:</strong></td>
-                        <td id="column2">245</td>
-                    </tr>
-                    <tr>
-                        <td id="column1"><strong>Contact Info:</strong></td>
-                        <td id="column2">jredding1@atu.edu<br />(479) 498-6084</td>
-                    </tr>
-                </table>
-            </li>
-                        <!-- Add more entries here -->
+            @if (Model != null)
+            {
+                var allProfessors = ProfessorService.GetProfessorInfo().Result;
+                var allOfficeHours = OfficeHoursService.GetOfficeHoursInfo("SELECT * from officehours").Result;
+
+                @foreach (var professor in allProfessors)
+                {
+                    var officeHoursForProfessor = allOfficeHours.Where(oh => oh.ProfessorID == professor.ProfessorID);
+
+                    <li>
+                        <table>
+                            <tr>
+                                <td id="column1"><strong>Instructor:</strong></td>
+                                <td id="column2">@professor.FullName</td>
+                            </tr>
+                            <tr>
+                                <td id="column1"><strong>Office Hours:</strong></td>
+                                <td id="column2">
+                                    @if (officeHoursForProfessor.Any())
+                                    {
+                                        @foreach (var officeHours in officeHoursForProfessor)
+                                        {
+                                            <div>
+                                                <span>@officeHours.DayOfWeek: </span>
+                                                <span>@officeHours.StartTime - @officeHours.EndTime</span>
+                                            </div>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <div>No office hours available</div>
+                                    }
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="column1"><strong>Department:</strong></td>
+                                <td id="column2">@professor.Department</td>
+                            </tr>
+                            <tr>
+                                <td id="column1"><strong>Room Number:</strong></td>
+                                <td id="column2">@professor.OfficeNum</td>
+                            </tr>
+                            <tr>
+                                <td id="column1"><strong>Contact Info:</strong></td>
+                                <td id="column2">@professor.Email @professor.Phone</td>
+                            </tr>
+                        </table>
+                    </li>
+                }
+            }
+            else
+            {
+                <li>
+                    <table>
+                        <tr>
+                            <td colspan="7">No professors found.</td>
+                        </tr>
+                    </table>
+                </li>
+            }
         </ul>
     </section>
+
 </body>
+
