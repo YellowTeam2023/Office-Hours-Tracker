@@ -13,23 +13,23 @@ namespace MyCoreApp.Data
             List<Professor> list = new List<Professor>();
             using (MySqlConnection conn = OfficeDatabaseContext.GetConnection())
             {
-                conn.Open();
+                await conn.OpenAsync();
                 using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM Professor", conn))
                 {
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    using (MySqlDataReader reader = await cmd.ExecuteReaderAsync())
                     {
-                        while (reader.Read())
+                        while (await reader.ReadAsync())
                         {
                             list.Add(new Professor()
                             {
                                 ProfessorID = reader.GetInt32("ProfessorID"),
-                                FName = reader.GetString("FName"),
-                                LName = reader.GetString("LName"),
-                                FullName = reader.GetString("FullName"),
-                                Email = reader.GetString("Email"),
-                                Phone = reader.GetString("Phone"),
-                                OfficeNum = reader.GetString("OfficeNum"),
-                                Department = reader.GetString("Department"),
+                                FName = GetStringOrNull(reader, "FName"),
+                                LName = GetStringOrNull(reader, "LName"),
+                                FullName = GetStringOrNull(reader, "FullName"),
+                                Email = GetStringOrNull(reader, "Email"),
+                                Phone = GetStringOrNull(reader, "Phone"),
+                                OfficeNum = GetStringOrNull(reader, "OfficeNum"),
+                                Department = GetStringOrNull(reader, "Department"),
                             });
                         }
                     }
@@ -37,5 +37,12 @@ namespace MyCoreApp.Data
             }
             return list.ToArray();
         }
+
+        private string GetStringOrNull(MySqlDataReader reader, string columnName)
+        {
+            int ordinal = reader.GetOrdinal(columnName);
+            return reader.IsDBNull(ordinal) ? null : reader.GetString(ordinal);
+        }
+
     }
 }
