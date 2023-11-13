@@ -8,6 +8,7 @@ OfficeDatabaseContext.conStr = builder.Configuration["ConnectionStrings:DefaultC
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<ProfessorDetailService>();
+builder.Services.AddSingleton<OfficeHoursDetailService>();
 
 
 

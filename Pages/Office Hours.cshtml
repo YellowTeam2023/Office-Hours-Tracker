@@ -4,6 +4,7 @@
 @using Microsoft.AspNetCore.Mvc
 
 @inject ProfessorDetailService ProfessorService
+@inject OfficeHoursDetailService OfficeHoursService
 
 @{
     ViewData["Title"] = "Office Hours";
@@ -18,6 +19,7 @@
             <th>ID</th>
             <th>First Name</th>
             <th>Last Name</th>
+            <th>Full Name</th>
             <th>Email</th>
             <th>Phone</th>
             <th>Office Number</th>
@@ -33,6 +35,7 @@
                     <td>@professor.ProfessorID</td>
                     <td>@professor.FName</td>
                     <td>@professor.LName</td>
+                    <td>@professor.FullName</td>
                     <td>@professor.Email</td>
                     <td>@professor.Phone</td>
                     <td>@professor.OfficeNum</td>
@@ -50,13 +53,40 @@
 </table>
 
 
+<h1>OfficeHours List</h1>
 
-
-
-
-
-
-
+<table>
+    <thead>
+        <tr>
+            <th>SlotID</th>
+            <th>ProfessorID</th>
+            <th>DayOfWeek</th>
+            <th>StartTime</th>
+            <th>EndTime</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (var officeHours in OfficeHoursService.GetOfficeHoursInfo().Result)
+            {
+                <tr>
+                    <td>@officeHours.SlotID</td>
+                    <td>@officeHours.ProfessorID</td>
+                    <td>@officeHours.DayOfWeek</td>
+                    <td>@officeHours.StartTime</td>
+                    <td>@officeHours.EndTime</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="7">No professors found.</td>
+            </tr>
+        }
+    </tbody>
+</table>
 
 
 <!--------------------------------------------------------------------------------------------------------------->
