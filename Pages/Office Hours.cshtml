@@ -3,7 +3,7 @@
 @using MyCoreApp.Data
 @using Microsoft.AspNetCore.Mvc
 
-@model MyCoreApp.Models.Professor[]
+@inject ProfessorDetailService ProfessorService
 
 @{
     ViewData["Title"] = "Office Hours";
@@ -27,7 +27,7 @@
     <tbody>
         @if (Model != null)
         {
-            @foreach (var professor in Model)
+            @foreach (var professor in ProfessorService.GetProfessorInfo().Result)
             {
                 <tr>
                     <td>@professor.ProfessorID</td>

@@ -8,9 +8,9 @@ namespace MyCoreApp.Data
         GetDBInfo objUsers = new GetDBInfo();
         public async Task<Professor[]> GetProfessorInfo()
         {
-            Professor[] custsObjs;
-            custsObjs = objUsers.GetProfessorInfo().Result.ToArray();
-            return custsObjs;
+            Professor[] profObj;
+            profObj = objUsers.GetProfessorInfo().Result.ToArray();
+            return profObj;
         }
     }
 }

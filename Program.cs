@@ -1,7 +1,6 @@
 using MyCoreApp.Data;
 using MyCoreApp.Models;
 using System.Configuration;
-
 var builder = WebApplication.CreateBuilder(args);
 
 OfficeDatabaseContext.conStr = builder.Configuration["ConnectionStrings:DefaultConnection"];
