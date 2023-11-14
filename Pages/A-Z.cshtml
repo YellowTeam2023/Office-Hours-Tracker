@@ -1,0 +1,85 @@
+﻿@page
+@model MyCoreApp.Pages.A_ZModel
+@{
+	ViewData["Title"] = "A-Z";
+}
+
+@using MyCoreApp.Models
+@using MyCoreApp.Data
+@using Microsoft.AspNetCore.Mvc
+
+@inject ProfessorDetailService ProfessorService
+@inject OfficeHoursDetailService OfficeHoursService
+
+@{
+    ViewData["Title"] = "Office Hours";
+}
+
+<body id="corley">
+    <center><h1><strong>A-Z</strong></h1></center>
+    <section id="upcoming-hours">
+        <ul>
+            @if (Model != null)
+            {
+                var allProfessors = ProfessorService.GetProfessorInfo("SELECT * from professor ORDER BY LName, FName").Result;
+                var allOfficeHours = OfficeHoursService.GetOfficeHoursInfo("SELECT * from officehours").Result;
+
+                @foreach (var professor in allProfessors)
+                {
+                    var officeHoursForProfessor = allOfficeHours.Where(oh => oh.ProfessorID == professor.ProfessorID);
+
+                    <li>
+                        <table>
+                            <tr>
+                                <td id="column1"><strong>Instructor:</strong></td>
+                                <td id="column2">@professor.FullName</td>
+                            </tr>
+                            <tr>
+                                <td id="column1"><strong>Office Hours:</strong></td>
+                                <td id="column2">
+                                    @if (officeHoursForProfessor.Any())
+                                    {
+                                        @foreach (var officeHours in officeHoursForProfessor)
+                                        {
+                                            <div>
+                                                <span>@officeHours.DayOfWeek: </span>
+                                                <span>@officeHours.StartTime - @officeHours.EndTime</span>
+                                            </div>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <div>No office hours available</div>
+                                    }
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="column1"><strong>Department:</strong></td>
+                                <td id="column2">@professor.Department</td>
+                            </tr>
+                            <tr>
+                                <td id="column1"><strong>Room Number:</strong></td>
+                                <td id="column2">@professor.OfficeNum</td>
+                            </tr>
+                            <tr>
+                                <td id="column1"><strong>Contact Info:</strong></td>
+                                <td id="column2">@professor.Email @professor.Phone</td>
+                            </tr>
+                        </table>
+                    </li>
+                }
+            }
+            else
+            {
+                <li>
+                    <table>
+                        <tr>
+                            <td colspan="7">No professors found.</td>
+                        </tr>
+                    </table>
+                </li>
+            }
+        </ul>
+    </section>
+
+</body>

@@ -8,13 +8,13 @@ namespace MyCoreApp.Data
 {
     public class GetDBInfo
     {
-        public async Task<Professor[]> GetProfessorInfo()
+        public async Task<Professor[]> GetProfessorInfo(String Conn)
         {
             List<Professor> list = new List<Professor>();
             using (MySqlConnection conn = OfficeDatabaseContext.GetConnection())
             {
                 await conn.OpenAsync();
-                using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM Professor", conn))
+                using (MySqlCommand cmd = new MySqlCommand(Conn, conn))
                 {
                     using (MySqlDataReader reader = await cmd.ExecuteReaderAsync())
                     {
