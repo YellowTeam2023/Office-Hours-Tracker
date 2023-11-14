@@ -73,6 +73,8 @@ table, th, td {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #cccccc;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 li{
