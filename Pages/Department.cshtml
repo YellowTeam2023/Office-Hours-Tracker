@@ -1,5 +1,126 @@
 ﻿@page
 @model MyCoreApp.Pages.DepartmentModel
 @{
-	ViewData["Title"] = "Department";
+
+
+    ViewData["Title"] = "Department";
+
+<body id="corley">
+    <h1>@ViewData["Title"]</h1>
+        <div id="searchBar">
+            <form action="phpSearch.php" method="post">
+                <label for="search">Select Department:</label>
+                <select name="Department">
+                    <option value="option1">Computer Science</option>
+                    <option value="option2">Mathematics</option>
+                    <option value="option3">Mechanical Engineering</option>
+                    <option value="option3">Electrical Engineering</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <br>
+                <input type="submit">
+            </form>
+        </div>
+    <section id="upcoming-hours">
+        <ul>
+            <li>
+                <table>
+                    <tr>
+                        <td id="column1"><strong>Instructor:</strong></td>
+                        <td id="column2">Tolga Ensari</td>
+                    </tr>
+                    <tr>
+                        <td id="column1"><strong>Office Hours:</strong></td>
+                        <td id="column2">Wednesday (10am - 12pm)</td>
+                    </tr>
+                    <tr>
+                        <td id="column1"><strong>Department:</strong></td>
+                        <td id="column2">Computer Science</td>
+                    </tr>
+                    <tr>
+                        <td id="column1"><strong>Room Number:</strong></td>
+                        <td id="column2">241</td>
+                    </tr>
+                    <tr>
+                        <td id="column1"><strong>Contact Info:</strong></td>
+                        <td id="column2">tensari1@atu.edu<br />(479) 356-2161</td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                <table>
+                    <tr>
+                        <td id="column1"><strong>Instructor:</strong></td>
+                        <td id="column2">Bhaskar Ghosh</td>
+                    </tr>
+                    <tr>
+                        <td id="column1"><strong>Office Hours:</strong></td>
+                        <td id="column2">Wednesday (10am - 2pm), Friday (10am - 12pm Virtual Only)</td>
+                    </tr>
+                    <tr>
+                        <td id="column1"><strong>Department:</strong></td>
+                        <td id="column2">Computer Science</td>
+                    </tr>
+                    <tr>
+                        <td id="column1"><strong>Room Number:</strong></td>
+                        <td id="column2">239</td>
+                    </tr>
+                    <tr>
+                        <td id="column1"><strong>Contact Info:</strong></td>
+                        <td id="column2">bghosh@atu.edu<br />(479) 317-7120</td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                <table>
+                    <tr>
+                        <td id="column1"><strong>Instructor:</strong></td>
+                        <td id="column2">Robin Ghosh</td>
+                    </tr>
+                    <tr>
+                        <td id="column1"><strong>Office Hours:</strong></td>
+                        <td id="column2">Tuesday, Thursday (9:30am - 11am), Wednesday (10am - 11:30am Virtual Only, 1pm - 2:30pm Virtual Only)</td>
+                    </tr>
+                    <tr>
+                        <td id="column1"><strong>Department:</strong></td>
+                        <td id="column2">Computer Science</td>
+                    </tr>
+                    <tr>
+                        <td id="column1"><strong>Room Number:</strong></td>
+                        <td id="column2">231</td>
+                    </tr>
+                    <tr>
+                        <td id="column1"><strong>Contact Info:</strong></td>
+                        <td id="column2">rghosh@atu.edu<br />(479) 964-3252</td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                <table>
+                    <tr>
+                        <td id="column1"><strong>Instructor:</strong></td>
+                        <td id="column2">Joseph Redding</td>
+                    </tr>
+                    <tr>
+                        <td id="column1"><strong>Office Hours:</strong></td>
+                        <td id="column2">8:00am - 5:00pm By Appointment Only</td>
+                    </tr>
+                    <tr>
+                        <td id="column1"><strong>Department:</strong></td>
+                        <td id="column2">Computer Science</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Room Number:</strong></td>
+                        <td id="column2">245</td>
+                    </tr>
+                    <tr>
+                        <td id="column1"><strong>Contact Info:</strong></td>
+                        <td id="column2">jredding1@atu.edu<br />(479) 498-6084</td>
+                    </tr>
+                </table>
+            </li>
+            <!-- Add more entries here -->
+        </ul>
+    </section>
+</body>
 }
