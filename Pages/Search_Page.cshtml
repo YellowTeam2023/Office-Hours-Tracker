@@ -1,7 +1,6 @@
 ﻿@page
-@model MyCoreApp.Pages.A_ZModel
+@model MyCoreApp.Pages.Search_PageModel
 @{
-	ViewData["Title"] = "A-Z";
 }
 
 @using MyCoreApp.Models
@@ -12,16 +11,34 @@
 @inject OfficeHoursDetailService OfficeHoursService
 
 @{
-    ViewData["Title"] = "Office Hours";
+    ViewData["Title"] = "Search";
 }
 
 <body id="corley">
-    <center><h1><strong>A-Z</strong></h1></center>
+
     <section id="upcoming-hours">
+        <center><h1><strong>Search</strong></h1></center>
+
+        <form method="post">
+            <label for="userInput">Enter something:</label>
+            <input type="text" id="userInput" name="userInput" />
+            <button type="submit">Submit</button>
+        </form>
+
+        @if (Model.ShowMessage)
+        {
+            <div>
+                User Input: @Model.UserInput
+            </div>
+        }
+
         <ul>
             @if (Model != null)
             {
-                var allProfessors = ProfessorService.GetProfessorInfo("SELECT * FROM professor ORDER BY LName, FName;").Result;
+                // Use parameterized query to avoid SQL injection
+                var query = $"SELECT * FROM Professor WHERE FullName LIKE '%{Model.UserInput}%';";
+                var allProfessors = ProfessorService.GetProfessorInfo(query).Result;
+
                 var allOfficeHours = OfficeHoursService.GetOfficeHoursInfo("SELECT * FROM officehours;").Result;
 
                 @foreach (var professor in allProfessors)

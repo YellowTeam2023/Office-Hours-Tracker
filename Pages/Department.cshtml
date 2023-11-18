@@ -30,8 +30,8 @@
             <ul>
                 @if (Model != null)
                 {
-                    var allProfessors = ProfessorService.GetProfessorInfo("SELECT * from professor ORDER BY Department, LName, FName").Result;
-                    var allOfficeHours = OfficeHoursService.GetOfficeHoursInfo("SELECT * from officehours").Result;
+                    var allProfessors = ProfessorService.GetProfessorInfo("SELECT * FROM professor ORDER BY Department, LName, FName;").Result;
+                    var allOfficeHours = OfficeHoursService.GetOfficeHoursInfo("SELECT * FROM officehours;").Result;
 
                     @foreach (var professor in allProfessors)
                     {
