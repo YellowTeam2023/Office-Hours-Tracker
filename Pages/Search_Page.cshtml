@@ -28,11 +28,10 @@
         </div>
 
         <ul>
-            @if (Model != null)
+            @if (Model != null && Model.UserInput != null)
             {
                 var query = $"SELECT * FROM Professor WHERE FullName LIKE '%{Model.UserInput}%' OR OfficeNum LIKE '%{Model.UserInput}%';";
                 var allProfessors = ProfessorService.GetProfessorInfo(query).Result;
-
                 var allOfficeHours = OfficeHoursService.GetOfficeHoursInfo("SELECT * FROM officehours;").Result;
 
                 @foreach (var professor in allProfessors)
