@@ -21,7 +21,7 @@
 
         <div id="searchBar">
         <form method="post">
-            <label for="userInput">Enter Professor Name:</label>
+            <label for="userInput">Enter Professor Name OR Office Number:</label>
             <input type="text" id="userInput" name="userInput" />
             <button type="submit">Submit</button>
         </form>
@@ -92,6 +92,74 @@
                 </li>
             }
         </ul>
+
+
+        <ul>
+            @if (Model != null)
+            {
+                // Use parameterized query to avoid SQL injection
+                var query = $"SELECT * FROM Professor WHERE OfficeNum LIKE '%{Model.UserInput}%';";
+                var allProfessors = ProfessorService.GetProfessorInfo(query).Result;
+
+                var allOfficeHours = OfficeHoursService.GetOfficeHoursInfo("SELECT * FROM officehours;").Result;
+
+                @foreach (var professor in allProfessors)
+                {
+                    var officeHoursForProfessor = allOfficeHours.Where(oh => oh.ProfessorID == professor.ProfessorID);
+
+                    <li>
+                        <table>
+                            <tr>
+                                <td id="column1"><strong>Instructor:</strong></td>
+                                <td id="column2">@professor.FullName</td>
+                            </tr>
+                            <tr>
+                                <td id="column1"><strong>Office Hours:</strong></td>
+                                <td id="column2">
+                                    @if (officeHoursForProfessor.Any())
+                                    {
+                                        @foreach (var officeHours in officeHoursForProfessor)
+                                        {
+                                            <div>
+                                                <span>@officeHours.DayOfWeek: </span>
+                                                <span>@officeHours.StartTime - @officeHours.EndTime</span>
+                                            </div>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <div>No office hours available</div>
+                                    }
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="column1"><strong>Department:</strong></td>
+                                <td id="column2">@professor.Department</td>
+                            </tr>
+                            <tr>
+                                <td id="column1"><strong>Room Number:</strong></td>
+                                <td id="column2">@professor.OfficeNum</td>
+                            </tr>
+                            <tr>
+                                <td id="column1"><strong>Contact Info:</strong></td>
+                                <td id="column2">@professor.Email @professor.Phone</td>
+                            </tr>
+                        </table>
+                    </li>
+                }
+            }
+            else
+            {
+                <li>
+                    <table>
+                        <tr>
+                            <td colspan="7">No professors found.</td>
+                        </tr>
+                    </table>
+                </li>
+            }
+        </ul>
+
     </section>
 
 </body>
