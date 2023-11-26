@@ -19,18 +19,13 @@
     <section id="upcoming-hours">
         <center><h1><strong>Search</strong></h1></center>
 
+        <div id="searchBar">
         <form method="post">
-            <label for="userInput">Enter something:</label>
+            <label for="userInput">Enter Professor Name:</label>
             <input type="text" id="userInput" name="userInput" />
             <button type="submit">Submit</button>
         </form>
-
-        @if (Model.ShowMessage)
-        {
-            <div>
-                User Input: @Model.UserInput
-            </div>
-        }
+        </div>
 
         <ul>
             @if (Model != null)

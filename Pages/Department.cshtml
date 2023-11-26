@@ -12,25 +12,29 @@
 
 <body id="corley">
     <h1>@ViewData["Title"]</h1>
+
+       
         <div id="searchBar">
-            <form action="phpSearch.php" method="post">
-                <label for="search">Select Department:</label>
-                <select name="Department">
-                    <option value="option1">Computer Science</option>
-                    <option value="option2">Mathematics</option>
-                    <option value="option3">Mechanical Engineering</option>
-                    <option value="option3">Electrical Engineering</option>
-                    <!-- Add more options as needed -->
+        <form method="post">
+                <select name="DepartmentForm">
+                    <option value="">Select a Department</option>
+                    <option value="Mathematics (MATH)">Mathematics (MATH)</option>
+                    <option value="Mechanical Engineering (MCEG)">Mechanical Engineering (MCEG)</option>
+                    <option value="Electrical Engineering (ELEG)">Electrical Engineering (ELEG)</option>
+                    <option value="Computer Information Systems (CIS)">Computer Information Systems (CIS)</option>
                 </select>
-                <br>
-                <input type="submit">
-            </form>
+                <button type="submit">Submit</button>
+            </>
+        </form>
         </div>
+
+        
     <section id="upcoming-hours">
             <ul>
                 @if (Model != null)
                 {
-                    var allProfessors = ProfessorService.GetProfessorInfo("SELECT * FROM professor ORDER BY Department, LName, FName;").Result;
+                    var query = $"SELECT * FROM Professor WHERE Department = '{Model.DepartmentName}';";
+                    var allProfessors = ProfessorService.GetProfessorInfo(query).Result;
                     var allOfficeHours = OfficeHoursService.GetOfficeHoursInfo("SELECT * FROM officehours;").Result;
 
                     @foreach (var professor in allProfessors)
