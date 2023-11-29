@@ -1,8 +1,15 @@
 ﻿@page
-@model IndexModel
+@model MyCoreApp.Pages.IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
+
+@using MyCoreApp.Models
+@using MyCoreApp.Data
+@using Microsoft.AspNetCore.Mvc
+
+@inject ProfessorDetailService ProfessorService
+
 
 <body id="corley">
     <header>
@@ -24,10 +31,17 @@
                     <label for="professor">Select a Professor: (required)  </label>
                     <select id="professor" name="professor" required>
                         <option value="">--Please select--</option>
-                        <option value="Robin Ghosh">Robin Ghosh</option>
-                        <option value="Tolga Ensari">Tolga Ensari</option>
-                        <option value="Bhaskar Ghosh">Bhaskar Ghosh</option>
-                        <option value="Joseph Redding">Joseph Redding</option>
+
+                        @{
+                            var allProfessors = ProfessorService.GetProfessorInfo("SELECT * FROM professor ORDER BY LName, FName;").Result;
+                            
+                            <!-- Displays professor name in the dropdown list :DDDDDDDD -->
+                            foreach (var professor in allProfessors)
+                            {
+                                <option value="@professor.FullName">@professor.FullName</option>
+                            }
+                        }
+
                     </select>
                 </div>
                 <div>
