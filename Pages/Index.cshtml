@@ -16,9 +16,16 @@
         <center><h1><strong>Meeting Scheduling Form</strong></h1></center>
     </header>
 <main>
+    @{ 
+        //Stores all professor info in one call (no need for office hour info on this page)
+        //Relies on rge @inject statement
+        var allProfessors = ProfessorService.GetProfessorInfo("SELECT * FROM professor ORDER BY LName, FName;").Result;
+    }
+    
+
     <section id="office-hour-form">
         <h2>Schedule Office Hours</h2>
-            <form>
+            <form method="post" asp-page-handler="SubmitForm">
                 <div>
                     <label for="name">Name: (required)  </label>
                     <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -33,9 +40,7 @@
                         <option value="">--Please select--</option>
 
                         @{
-                            var allProfessors = ProfessorService.GetProfessorInfo("SELECT * FROM professor ORDER BY LName, FName;").Result;
-                            
-                            <!-- Displays professor name in the dropdown list :DDDDDDDD -->
+                            //Displays professor name in the dropdown list :DDDDDDDD
                             foreach (var professor in allProfessors)
                             {
                                 <option value="@professor.FullName">@professor.FullName</option>
@@ -46,18 +51,18 @@
                 </div>
                 <div>
                     <label for="coursenumber">Course Number:  </label>
-                    <input type="text" id="coursenumber" name="coursenumber" placeholder="Enter the Course Number" required>
+                    <input type="text" id="coursenumber" name="coursenumber" placeholder="Enter the Course Number">
                 </div>
                 <div>
                     <label for="sectionnumber">Section Number:  </label>
-                    <input type="text" id="sectionnumber" name="sectionnumber" placeholder="Enter the Section Number" required>
+                    <input type="text" id="sectionnumber" name="sectionnumber" placeholder="Enter the Section Number">
                 </div>
                 <div>
                     <label for="start-date">Select a Date: (required)  </label>
                     <input type="date" id="start-date" name="start-date" required>
                 </div>
                 <div>
-                    <label for="meeting-type">Select a Meeting Type: (required)  </label>
+                    <label for="meeting-type">Select a Meeting Type:  </label>
                     <input type="checkbox" id="inperson" name="inperson" value="In-Person" checked>
                     <label for="inperson"> In-Person</label>
                     <input type="checkbox" id="virtual" name="virtual" value="Virtual">
@@ -70,6 +75,26 @@
                 </div>
                 <button type="submit">Submit</button>
             </form>
+
+
+            @if (Model.FormSubmitted)
+            {
+                string ProfessorEmail = string.Empty;
+                var professorEmailGrab = ProfessorService.GetProfessorInfo($"SELECT * FROM Professor WHERE FullName LIKE '%{Model.Professor}%';").Result;
+
+                foreach (var professor in professorEmailGrab)
+                {
+                    ProfessorEmail = professor.Email;
+                    break;
+                }
+
+                <div>
+                   <br />
+                    <a class="email-link" href="mailto:@ProfessorEmail?subject=Meeting%20Confirmation&amp;body=Dear%20 @Model.Professor,%0D%0A%0D%0AName: @Model.Name%0D%0AEmail: @Model.Email%0D%0AProfessor: @Model.Professor%0D%0ACourse Number: @Model.CourseNumber%0D%0ASection Number: @Model.SectionNumber%0D%0AStart Date: @Model.StartDate.ToShortDateString()%0D%0AMeeting Type: @(Model.InPerson ? "In-Person" : "") @(Model.VirtualMeeting ? "Virtual" : "")%0D%0AMessage: @Model.Message%0D%0A%0D%0ABest regards, @Model.Name">Send Email</a>
+                </div>
+            }
+
+
     </section>
 </main>
 </body>

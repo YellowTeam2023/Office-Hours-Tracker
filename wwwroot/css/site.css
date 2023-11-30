@@ -126,3 +126,22 @@ button:hover {
 input {
     border-radius: 10px;
 }
+
+.email-link {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #007BFF;
+    border-radius: 20px; 
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+    .email-link:hover {
+        background-color: #ffc107;
+        color: #000;
+        border-color: #ffc107;
+    }
