@@ -1,7 +1,7 @@
 ﻿@page
 @model MyCoreApp.Pages.A_ZModel
 @{
-	ViewData["Title"] = "A-Z";
+    ViewData["Title"] = "A-Z";
 }
 
 @using MyCoreApp.Models
@@ -11,12 +11,20 @@
 @inject ProfessorDetailService ProfessorService
 @inject OfficeHoursDetailService OfficeHoursService
 
-@{
-    ViewData["Title"] = "Office Hours";
-}
-
 <body id="corley">
-    <center><h1><strong>A-Z</strong></h1></center>
+    <center>
+        <h1><strong>A-Z</strong></h1>
+        <nav id="AZnav" class="AZnav-list">
+            <ul class="AZnav-list">
+                @for (char letter = 'A'; letter <= 'Z'; letter++)
+                {
+                    <li class="AZnav-item">
+                        <a href="#letter-@letter" class="AZnav-link">@letter</a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    </center>
     <section id="upcoming-hours">
         <ul>
             @if (Model != null)
@@ -24,49 +32,64 @@
                 var allProfessors = ProfessorService.GetProfessorInfo("SELECT * FROM professor ORDER BY LName, FName;").Result;
                 var allOfficeHours = OfficeHoursService.GetOfficeHoursInfo("SELECT * FROM officehours;").Result;
 
-                @foreach (var professor in allProfessors)
+                foreach (var letter in Enumerable.Range('A', 'Z' - 'A' + 1).Select(c => (char)c))
                 {
-                    var officeHoursForProfessor = allOfficeHours.Where(oh => oh.ProfessorID == professor.ProfessorID);
+                    var professorsStartingWithLetter = allProfessors.Where(p => char.ToUpper(p.LName.FirstOrDefault()) == letter);
 
-                    <li>
-                        <table>
-                            <tr>
-                                <td id="column1"><strong>Instructor:</strong></td>
-                                <td id="column2">@professor.FullName</td>
-                            </tr>
-                            <tr>
-                                <td id="column1"><strong>Office Hours:</strong></td>
-                                <td id="column2">
-                                    @if (officeHoursForProfessor.Any())
-                                    {
-                                        @foreach (var officeHours in officeHoursForProfessor)
-                                        {
-                                            <div>
-                                                <span>@officeHours.DayOfWeek: </span>
-                                                <span>@officeHours.StartTime - @officeHours.EndTime</span>
-                                            </div>
-                                        }
-                                    }
-                                    else
-                                    {
-                                        <div>No office hours available</div>
-                                    }
-                                </td>
-                            </tr>
-                            <tr>
-                                <td id="column1"><strong>Department:</strong></td>
-                                <td id="column2">@professor.Department</td>
-                            </tr>
-                            <tr>
-                                <td id="column1"><strong>Room Number:</strong></td>
-                                <td id="column2">@professor.OfficeNum</td>
-                            </tr>
-                            <tr>
-                                <td id="column1"><strong>Contact Info:</strong></td>
-                                <td id="column2">@professor.Email @professor.Phone</td>
-                            </tr>
-                        </table>
-                    </li>
+                    if (professorsStartingWithLetter.Any())
+                    {
+                        <li id="letter-@letter">
+                            <h2>@letter</h2>
+                            <ul>
+                                @foreach (var professor in professorsStartingWithLetter)
+                                {
+                                    var officeHoursForProfessor = allOfficeHours.Where(oh => oh.ProfessorID == professor.ProfessorID);
+
+                                    <li>
+                                        <table>
+                                            <tr>
+                                                <td id="column1"><strong>Instructor:</strong></td>
+                                                <td id="column2">@professor.FullName</td>
+                                            </tr>
+                                            <tr>
+                                                <td id="column1"><strong>Office Hours:</strong></td>
+                                                <td id="column2">
+                                                    @if (officeHoursForProfessor.Any())
+                                                    {
+                                                        @foreach (var officeHours in officeHoursForProfessor)
+                                                        {
+                                                            <div>
+                                                                <span>@officeHours.DayOfWeek: </span>
+                                                                <span>@officeHours.StartTime - @officeHours.EndTime</span>
+                                                            </div>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <div>No office hours available</div>
+                                                    }
+                                                </td>
+                                            </tr>
+                                            <!-- Add other professor details here -->
+                                            <tr>
+                                                <td id="column1"><strong>Department:</strong></td>
+                                                <td id="column2">@professor.Department</td>
+                                            </tr>
+                                            <tr>
+                                                <td id="column1"><strong>Room Number:</strong></td>
+                                                <td id="column2">@professor.OfficeNum</td>
+                                            </tr>
+                                            <tr>
+                                                <td id="column1"><strong>Contact Info:</strong></td>
+                                                <td id="column2">@professor.Email @professor.Phone</td>
+                                            </tr>
+                                            <!-- Add other details as needed -->
+                                        </table>
+                                    </li>
+                                }
+                            </ul>
+                        </li>
+                    }
                 }
             }
             else
@@ -81,5 +104,27 @@
             }
         </ul>
     </section>
+
+    <button onclick="returnToTop()" id="returnToTopBtn" title="Return to Top">Return to Top</button>
+
+    <script>
+        function returnToTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        }
+
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            var btn = document.getElementById("returnToTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
