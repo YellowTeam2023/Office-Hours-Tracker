@@ -62,6 +62,10 @@
                     <input type="date" id="start-date" name="start-date" required>
                 </div>
                 <div>
+                    <label for="meetingtime">Select a Time: (required)  </label>
+                    <input type="time" id="meetingtimee" name="meetingtime" required>
+                </div>
+                <div>
                     <label for="meeting-type">Select a Meeting Type:  </label>
                     <input type="checkbox" id="inperson" name="inperson" value="In-Person" checked>
                     <label for="inperson"> In-Person</label>
@@ -90,7 +94,7 @@
 
                 <div>
                    <br />
-                    <a class="email-link" href="mailto:@ProfessorEmail?subject=Meeting%20Confirmation&amp;body=Dear%20 @Model.Professor,%0D%0A%0D%0AName: @Model.Name%0D%0AEmail: @Model.Email%0D%0AProfessor: @Model.Professor%0D%0ACourse Number: @Model.CourseNumber%0D%0ASection Number: @Model.SectionNumber%0D%0AStart Date: @Model.StartDate.ToShortDateString()%0D%0AMeeting Type: @(Model.InPerson ? "In-Person" : "") @(Model.VirtualMeeting ? "Virtual" : "")%0D%0AMessage: @Model.Message%0D%0A%0D%0ABest regards, @Model.Name">Send Email</a>
+                    <a class="email-link" href="mailto:@ProfessorEmail?subject=Meeting%20Confirmation&amp;body=Dear%20 @Model.Professor,%0D%0A%0D%0AName: @Model.Name%0D%0AEmail: @Model.Email%0D%0AProfessor: @Model.Professor%0D%0ACourse Number: @Model.CourseNumber%0D%0ASection Number: @Model.SectionNumber%0D%0AStart Date: @Model.StartDate.ToShortDateString()%0D%0ATime: @Model.StartTime.ToShortTimeString()%0D%0AMeeting Type: @(Model.InPerson ? "In-Person" : "") @(Model.VirtualMeeting ? "Virtual" : "")%0D%0AMessage: @Model.Message%0D%0A%0D%0ABest regards, @Model.Name">Send Email</a>
                 </div>
             }
 

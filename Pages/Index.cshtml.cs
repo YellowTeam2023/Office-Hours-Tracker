@@ -28,6 +28,7 @@ namespace MyCoreApp.Pages
         public string CourseNumber { get; private set; }
         public string SectionNumber { get; private set; }
         public DateTime StartDate { get; private set; }
+        public DateTime StartTime { get; private set; }
         public bool InPerson { get; private set; }
         public bool VirtualMeeting { get; private set; }
         public string Message { get; private set; }
@@ -44,6 +45,7 @@ namespace MyCoreApp.Pages
             CourseNumber = Request.Form["coursenumber"];
             SectionNumber = Request.Form["sectionnumber"];
             StartDate = DateTime.Parse(Request.Form["start-date"]);
+            StartTime = DateTime.Parse(Request.Form["meetingtime"]);
             InPerson = Request.Form["inperson"].Count > 0;
             VirtualMeeting = Request.Form["virtual"].Count > 0;
             Message = Request.Form["message"];
