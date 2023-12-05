@@ -9,14 +9,13 @@
 
 @inject ProfessorDetailService ProfessorService
 @inject OfficeHoursDetailService OfficeHoursService
-
 <body id="corley">
     <h1>@ViewData["Title"]</h1>
 
        
         <div id="searchBar">
-        <form method="post">
-                <select name="DepartmentForm">
+        <form method="post" onsubmit="return handleFormSubmission(event)">
+            <select id="headerSelector" name="DepartmentForm">
                     <option value="">Select a Department</option>
                     <option value="Mathematics (MATH)">Mathematics (MATH)</option>
                     <option value="Mechanical Engineering (MCEG)">Mechanical Engineering (MCEG)</option>
@@ -29,6 +28,8 @@
 
         
     <section id="upcoming-hours">
+        <h1 id="dynamicHeader"></h1>
+                
             <ul>
                 @if (Model != null)
                 {
@@ -93,4 +94,5 @@
                 }
             </ul>
     </section>
+	<script src="/js/site.js"></script>
 </body>

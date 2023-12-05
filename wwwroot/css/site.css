@@ -92,7 +92,9 @@ li{
 
 /* Search Bar */
 #searchBar {
-    display: flex;
+    display: grid; /* Use CSS Grid */
+    grid-auto-flow: column; /* Layout items in a single row */
+    grid-gap: 10px; /* Gap between items */
     background-color: rgba(19,44,42,.9);
     color: white;
     border-radius: 10px;
@@ -102,7 +104,7 @@ li{
 }
 
 #searchBar input {
-    width: 500px; /* Adjust as needed */
+    width: 65%; /* Adjust as needed */
     justify-content: center;
     align-items: center;
 }
@@ -174,7 +176,8 @@ input {
 
 .AZnav-link {
     text-decoration: none;
-    color: white;
+    color: black;
+    background-color: white;
     padding: 5px 10px;
     border: 1px solid white;
     border-radius: 3px;
@@ -182,7 +185,8 @@ input {
 }
 
     .AZnav-link:hover {
-        background-color: #ddd;
+        background-color: #f6c947;
+        color: black;
     }
 
 @media (max-width: 768px) {
@@ -209,5 +213,6 @@ input {
 }
 
     #returnToTopBtn:hover {
-        background-color: #ddd; 
+        background-color: #f6c947;
+        color:black;
     }

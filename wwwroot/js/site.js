@@ -1,4 +1,22 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿document.addEventListener("DOMContentLoaded", function () {
 
-// Write your JavaScript code.
+function changeHeader() {
+    var dropdown = document.getElementById("headerSelector");
+    var selectedValue = dropdown.options[dropdown.selectedIndex].text;
+
+    // Get the header element
+    var headerElement = document.getElementById("dynamicHeader");
+
+    // Change the header text based on the selected value
+    headerElement.innerText = selectedValue;
+}
+
+// Function to handle the form submission
+function handleFormSubmission(event) {
+    // Your existing code to update the header
+    changeHeader();
+
+    // Prevent the default form submission behavior
+    event.preventDefault();
+    }
+});

@@ -144,3 +144,16 @@ C:\Users\tyler\OneDrive - Arkansas Tech University\Office_Hours_Tracker\Test-app
 C:\Users\tyler\OneDrive - Arkansas Tech University\Office_Hours_Tracker\Test-app\obj\Debug\net6.0\MyCoreApp.pdb
 C:\Users\tyler\OneDrive - Arkansas Tech University\Office_Hours_Tracker\Test-app\obj\Debug\net6.0\MyCoreApp.genruntimeconfig.cache
 C:\Users\tyler\OneDrive - Arkansas Tech University\Office_Hours_Tracker\Test-app\obj\Debug\net6.0\ref\MyCoreApp.dll
+C:\Users\Braden Prather\Source\Repos\YellowTeam2023\Test-app\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Braden Prather\Source\Repos\YellowTeam2023\Test-app\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Braden Prather\Source\Repos\YellowTeam2023\Test-app\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Braden Prather\Source\Repos\YellowTeam2023\Test-app\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Braden Prather\Source\Repos\YellowTeam2023\Test-app\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Braden Prather\Source\Repos\YellowTeam2023\Test-app\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Braden Prather\Source\Repos\YellowTeam2023\Test-app\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\Braden Prather\Source\Repos\YellowTeam2023\Test-app\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Braden Prather\Source\Repos\YellowTeam2023\Test-app\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\Braden Prather\Source\Repos\YellowTeam2023\Test-app\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Braden Prather\Source\Repos\YellowTeam2023\Test-app\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\Braden Prather\Source\Repos\YellowTeam2023\Test-app\obj\Debug\net6.0\MyCoreApp.csproj.AssemblyReference.cache
+C:\Users\Braden Prather\source\repos\YellowTeam2023\Test-app\obj\Debug\net6.0\MyCoreApp.csproj.CopyComplete
