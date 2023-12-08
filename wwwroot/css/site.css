@@ -176,8 +176,7 @@ input {
 
 .AZnav-link {
     text-decoration: none;
-    color: black;
-    background-color: white;
+    color: white;
     padding: 5px 10px;
     border: 1px solid white;
     border-radius: 3px;
@@ -185,8 +184,7 @@ input {
 }
 
     .AZnav-link:hover {
-        background-color: #f6c947;
-        color: black;
+        background-color: #ddd;
     }
 
 @media (max-width: 768px) {
@@ -204,15 +202,14 @@ input {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: #fff; 
-    color: rgba(19, 44, 42, 0.9); 
+    background-color: #fff;
+    color: rgba(19, 44, 42, 0.9);
     cursor: pointer;
     padding: 10px 15px;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
     #returnToTopBtn:hover {
-        background-color: #f6c947;
-        color:black;
+        background-color: #ddd;
     }
