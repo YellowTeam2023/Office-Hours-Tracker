@@ -31,8 +31,8 @@
                     <input type="text" id="name" name="name" placeholder="Enter your name" required>
                 </div>
                 <div>
-                    <label for="email">Email: (required)  </label>
-                    <input type="email" id="email" name="email" placeholder="Enter your atu.edu email" required>
+                    <label for="email">Email: (required)</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your atu.edu email" required onblur="addAtuDomain()">
                 </div>
                 <div>
                     <label for="professor">Select a Professor: (required)  </label>
@@ -57,13 +57,15 @@
                     <label for="sectionnumber">Section Number:  </label>
                     <input type="text" id="sectionnumber" name="sectionnumber" placeholder="Enter the Section Number">
                 </div>
-                <div>
+             <div>
                     <label for="start-date">Select a Date: (required)  </label>
-                    <input type="date" id="start-date" name="start-date" required>
+                    <!-- Adding min attribute to enforce at least a day later -->
+                    <input type="date" id="start-date" name="start-date" min="@DateTime.Now.AddDays(1).ToString("yyyy-MM-dd")" required>
                 </div>
                 <div>
                     <label for="meetingtime">Select a Time: (required)  </label>
-                    <input type="time" id="meetingtimee" name="meetingtime" required>
+                    <!-- Adding pattern attribute for a custom time pattern (HH:mm) and min/max for time range -->
+                    <input type="time" id="meetingtime" name="meetingtime" pattern="(?:[01]\d|2[0-3]):[0-5]\d" min="08:00" max="19:00" required>
                 </div>
                 <div>
                     <label for="meeting-type">Select a Meeting Type:  </label>
@@ -71,7 +73,6 @@
                     <label for="inperson"> In-Person</label>
                     <input type="checkbox" id="virtual" name="virtual" value="Virtual">
                     <label for="virtual"> Virtual</label>
-
                 </div>
                 <div>
                     <label for="message">Message:</label><br />
@@ -98,6 +99,18 @@
                 </div>
             }
 
+            <script>
+                function addAtuDomain() {
+                    var emailInput = document.getElementById('email');
+                    var emailValue = emailInput.value.trim();
+
+                    // Check if the email doesn't already end with ".atu.edu"
+                    if (!emailValue.endsWith('@@atu.edu')) {
+                        // Append ".atu.edu" to the email value
+                        emailInput.value = emailValue + '@@atu.edu';
+                    }
+                }
+            </script>
 
     </section>
 </main>

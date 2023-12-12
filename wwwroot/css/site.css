@@ -90,11 +90,11 @@ li{
     margin-bottom: 20px;
 }
 
-/* Search Bar */
+/* Search Bar 
 #searchBar {
-    display: grid; /* Use CSS Grid */
-    grid-auto-flow: column; /* Layout items in a single row */
-    grid-gap: 10px; /* Gap between items */
+    display: grid; 
+    grid-auto-flow: column; 
+    grid-gap: 10px; 
     background-color: rgba(19,44,42,.9);
     color: white;
     border-radius: 10px;
@@ -102,6 +102,7 @@ li{
     margin-left: 32px;
     padding: 10px 10px 10px 10px;
 }
+*/
 
 #searchBar input {
     width: 65%; /* Adjust as needed */
@@ -213,3 +214,75 @@ input {
     #returnToTopBtn:hover {
         background-color: #ddd;
     }
+
+
+/* Default styles for professor card */
+.professor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between cards */
+}
+
+.professor-card {
+    width: calc(50% - 25px); /* Adjust the width as needed */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #115740; /* Updated background color */
+    color: white; /* Text color */
+    border-radius: 10px; /* Border radius */
+    margin-top: 5px; /* Top margin */
+    margin-bottom: 20px; /* Bottom margin */
+}
+
+/* Ensure the table takes up full height of the professor-card */
+table {
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .professor-list {
+        flex-direction: column; /* Change to a single column layout for smaller screens */
+    }
+
+    .professor-card {
+        width: 100%; /* Occupy full width for one table per row on smaller screens */
+        margin-bottom: 20px; /* Add margin between cards in a single column layout */
+    }
+}
+
+
+#searchBar {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(19, 44, 42, 0.9);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    flex-wrap: wrap; /* Allow items to wrap */
+
+}
+
+/* for smaller screens */
+@media screen and (max-width: 768px) {
+    #searchBar {
+
+        margin-left: 2.5%; 
+    }
+}
+
+
+@font-face {
+    font-family: 'League Spartan';
+    src: url('/fonts/LeagueSpartan-Regular.ttf') format('truetype'); /* Adjust the format if needed */
+    /* Additional font formats (like WOFF, WOFF2) can also be included for broader browser support */
+    /* Font weight and style can be specified as needed */
+    font-weight: normal;
+    font-style: normal;
+}

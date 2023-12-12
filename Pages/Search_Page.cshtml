@@ -15,19 +15,18 @@
 }
 
 <body id="corley">
-
     <section id="upcoming-hours">
         <center><h1><strong>Search</strong></h1></center>
 
         <div id="searchBar">
-        <form method="post">
-            <label for="userInput">Enter Professor Name OR Office Number:</label>
-            <input type="text" id="userInput" name="userInput" />
-            <button type="submit">Submit</button>
-        </form>
+            <form method="post">
+                <label for="userInput">Enter Professor Name OR Office Number:</label>
+                <input type="text" id="userInput" name="userInput" />
+                <button type="submit">Submit</button>
+            </form>
         </div>
 
-        <ul>
+        <div class="professor-list">
             @if (Model != null && Model.UserInput != null)
             {
                 var query = $"SELECT * FROM Professor WHERE FullName LIKE '%{Model.UserInput}%' OR OfficeNum LIKE '%{Model.UserInput}%';";
@@ -38,11 +37,19 @@
                 {
                     var officeHoursForProfessor = allOfficeHours.Where(oh => oh.ProfessorID == professor.ProfessorID);
 
-                    <li>
+                    <div class="professor-card">
                         <table>
                             <tr>
                                 <td id="column1"><strong>Instructor:</strong></td>
                                 <td id="column2">@professor.FullName</td>
+                            </tr>
+                            <tr>
+                                <td id="column1"><strong>Department:</strong></td>
+                                <td id="column2">@professor.Department</td>
+                            </tr>
+                            <tr>
+                                <td id="column1"><strong>Room Number:</strong></td>
+                                <td id="column2">@professor.OfficeNum</td>
                             </tr>
                             <tr>
                                 <td id="column1"><strong>Office Hours:</strong></td>
@@ -64,23 +71,18 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td id="column1"><strong>Department:</strong></td>
-                                <td id="column2">@professor.Department</td>
-                            </tr>
-                            <tr>
-                                <td id="column1"><strong>Room Number:</strong></td>
-                                <td id="column2">@professor.OfficeNum</td>
-                            </tr>
-                            <tr>
                                 <td id="column1"><strong>Contact Info:</strong></td>
                                 <td id="column2">@professor.Email @professor.Phone</td>
                             </tr>
                         </table>
-                    </li>
+                    </div>
                 }
             }
-        </ul>
-
+        </div>
     </section>
-
 </body>
+
+
+
+
+

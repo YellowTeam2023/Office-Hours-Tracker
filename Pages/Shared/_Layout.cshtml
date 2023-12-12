@@ -7,32 +7,53 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MyCoreApp.styles.css" asp-append-version="true" />
+    <style>
+        /* Define custom background color class */
+        .bg-custom-color {
+            background-color: #115740 !important;
+        }
+
+        /* Applying League Spartan font to nav links/buttons */
+        .navbar-nav .nav-link {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 24px;
+        }
+
+        /* Logo styling */
+        .navbar-brand img {
+            height: 80px;
+        }
+
+        /* Adding padding between the nav links */
+        .navbar-nav .nav-item:not(:last-child) {
+            margin-right: 30px; /* Adjust the margin as needed */
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-custom-color border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Corley Office Hours Scheduler</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Index">Schedule</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/A-Z">A-Z</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Department">Department</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Search_Page">Search</a>
-                        </li>
-                    </ul>
-                </div>
+                <!-- Left-aligned items (Logo) -->
+                <a class="navbar-brand" asp-area="" asp-page="/Index">
+                    <img src="/images/logo.png" alt="Corley Office Hours Scheduler Logo" />
+                </a>
+
+                <!-- Right-aligned items (Buttons) -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-page="/Index">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-page="/A-Z">A-Z</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-page="/Department">Department</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-page="/Search_Page">Search</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
