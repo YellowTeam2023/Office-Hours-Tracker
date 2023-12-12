@@ -15,14 +15,16 @@
     <center>
         <h1><strong>A-Z</strong></h1>
         <nav id="AZnav" class="AZnav-list">
-            <ul class="AZnav-list">
-                @for (char letter = 'A'; letter <= 'Z'; letter++)
-                {
-                    <li class="AZnav-item">
-                        <a href="#letter-@letter" class="AZnav-link">@letter</a>
-                    </li>
-                }
-            </ul>
+            <div class="AZnav-row">
+                <ul class="AZnav-list">
+                    @for (char letter = 'A'; letter <= 'Z'; letter++)
+                    {
+                        <li class="AZnav-item">
+                            <a href="#letter-@letter" class="AZnav-link">@letter</a>
+                        </li>
+                    }
+                </ul>
+            </div>
         </nav>
     </center>
     <section id="upcoming-hours">

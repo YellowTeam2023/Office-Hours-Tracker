@@ -32,7 +32,7 @@ body {
 
 /*Office Hour Form*/
 #office-hour-form {
-    background-color: rgba(19,44,42,.9);
+    background-color: rgba(17, 87, 64, 0.9);
     color: white;
     border-radius: 10px;
     text-align: center;
@@ -82,12 +82,14 @@ li{
 }
 
 #upcoming-hours li {
-    background-color: rgba(19,44,42,.9);
+    background-color: rgba(17, 87, 64, 0.9);
     color: white;
     border-radius: 10px;
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 20px;
+    justify-content: center;
+    margin-left: -30px;
 }
 
 /* Search Bar 
@@ -152,12 +154,11 @@ input {
 
 
 #AZnav {
-    background-color: rgba(19, 44, 42, 0.9);
+    background-color: rgba(17, 87, 64, 0.9);
     color: white;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
-    margin-left: 30px;
     white-space: nowrap;
     display: grid; /* Use CSS Grid */
     grid-auto-flow: column; /* Layout items in a single row */
@@ -188,12 +189,6 @@ input {
     .AZnav-link:hover {
         background-color: #ddd;
     }
-
-@media (max-width: 768px) {
-    #AZnav {
-        grid-auto-flow: row; /* Change to multiple rows */
-    }
-}
 
 
 #returnToTopBtn {
@@ -266,10 +261,6 @@ td {
         margin-left: 0; /* Reset the margin for smaller screens if needed */
     }
 }
-
-
-
-
 
 
 #searchBar {
