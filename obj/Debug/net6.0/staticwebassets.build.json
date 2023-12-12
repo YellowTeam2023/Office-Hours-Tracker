@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SMBL1CNJT9K7hv2VZcUc9D2OLSozI0P/YTZaq4ToAEE=",
+  "Hash": "EziB+YRDyexrrHyYysTKdA5t/cVmvJeHUQzP7r18INw=",
   "Source": "MyCoreApp",
   "BasePath": "_content/MyCoreApp",
   "Mode": "Default",
@@ -85,6 +85,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\Truet\\OneDrive - Arkansas Tech University\\Office_Hours_Tracker\\Test-app\\wwwroot\\fonts\\LeagueSpartan-Regular.ttf",
+      "SourceId": "MyCoreApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Truet\\OneDrive - Arkansas Tech University\\Office_Hours_Tracker\\Test-app\\wwwroot\\",
+      "BasePath": "_content/MyCoreApp",
+      "RelativePath": "fonts/LeagueSpartan-Regular.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fonts\\LeagueSpartan-Regular.ttf"
+    },
+    {
       "Identity": "C:\\Users\\Truet\\OneDrive - Arkansas Tech University\\Office_Hours_Tracker\\Test-app\\wwwroot\\images\\Corley-Hall-1000.jpg",
       "SourceId": "MyCoreApp",
       "SourceType": "Discovered",
@@ -100,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Corley-Hall-1000.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Truet\\OneDrive - Arkansas Tech University\\Office_Hours_Tracker\\Test-app\\wwwroot\\images\\logo.png",
+      "SourceId": "MyCoreApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Truet\\OneDrive - Arkansas Tech University\\Office_Hours_Tracker\\Test-app\\wwwroot\\",
+      "BasePath": "_content/MyCoreApp",
+      "RelativePath": "images/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
       "Identity": "C:\\Users\\Truet\\OneDrive - Arkansas Tech University\\Office_Hours_Tracker\\Test-app\\wwwroot\\js\\site.js",
