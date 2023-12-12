@@ -102,13 +102,14 @@ li{
     margin-left: 32px;
     padding: 10px 10px 10px 10px;
 }
-*/
+
 
 #searchBar input {
-    width: 65%; /* Adjust as needed */
+    width: 65%; 
     justify-content: center;
     align-items: center;
 }
+*/
 
 button {
     border: none;
@@ -229,11 +230,12 @@ input {
     padding: 15px;
     display: flex;
     flex-direction: column;
-    background-color: #115740; /* Updated background color */
+    background-color: rgba(17, 87, 64, 0.9);
     color: white; /* Text color */
     border-radius: 10px; /* Border radius */
     margin-top: 5px; /* Top margin */
     margin-bottom: 20px; /* Bottom margin */
+    margin-left: 10px; /* Adjust the margin to move the whole content including background color */
 }
 
 /* Ensure the table takes up full height of the professor-card */
@@ -242,6 +244,14 @@ table {
     height: 100%;
     width: 100%;
     border-collapse: collapse;
+    border: 4px solid #FECD2F; /* Set border thickness and color */
+}
+
+th,
+td {
+    border: 4px solid #FECD2F; /* Set border thickness and color */
+    padding: 10px; /* Adjust cell padding as needed */
+    font-size: 1.1em; /* Adjust font size */
 }
 
 /* Media query for smaller screens */
@@ -253,20 +263,24 @@ table {
     .professor-card {
         width: 100%; /* Occupy full width for one table per row on smaller screens */
         margin-bottom: 20px; /* Add margin between cards in a single column layout */
+        margin-left: 0; /* Reset the margin for smaller screens if needed */
     }
 }
+
+
+
+
 
 
 #searchBar {
     display: flex;
     justify-content: center;
-    background-color: rgba(19, 44, 42, 0.9);
+    background-color: rgba(17, 87, 64, 0.9);
     border-radius: 10px;
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
     flex-wrap: wrap; /* Allow items to wrap */
-
 }
 
 /* for smaller screens */
