@@ -157,3 +157,46 @@ C:\Users\Braden Prather\Source\Repos\YellowTeam2023\Test-app\bin\Debug\net6.0\Mi
 C:\Users\Braden Prather\Source\Repos\YellowTeam2023\Test-app\bin\Debug\net6.0\MySqlConnector.dll
 C:\Users\Braden Prather\Source\Repos\YellowTeam2023\Test-app\obj\Debug\net6.0\MyCoreApp.csproj.AssemblyReference.cache
 C:\Users\Braden Prather\source\repos\YellowTeam2023\Test-app\obj\Debug\net6.0\MyCoreApp.csproj.CopyComplete
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\bin\Debug\net6.0\appsettings.json
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\bin\Debug\net6.0\MyCoreApp.staticwebassets.runtime.json
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\bin\Debug\net6.0\MyCoreApp.exe
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\bin\Debug\net6.0\MyCoreApp.deps.json
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\bin\Debug\net6.0\MyCoreApp.runtimeconfig.json
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\bin\Debug\net6.0\MyCoreApp.dll
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\bin\Debug\net6.0\MyCoreApp.pdb
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\MyCoreApp.csproj.AssemblyReference.cache
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\MyCoreApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\MyCoreApp.AssemblyInfoInputs.cache
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\MyCoreApp.AssemblyInfo.cs
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\MyCoreApp.csproj.CoreCompileInputs.cache
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\MyCoreApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\MyCoreApp.RazorAssemblyInfo.cache
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\MyCoreApp.RazorAssemblyInfo.cs
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\staticwebassets\msbuild.MyCoreApp.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\staticwebassets\msbuild.build.MyCoreApp.props
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MyCoreApp.props
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.MyCoreApp.props
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\scopedcss\bundle\MyCoreApp.styles.css
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\scopedcss\projectbundle\MyCoreApp.bundle.scp.css
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\MyCoreApp.csproj.CopyComplete
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\MyCoreApp.dll
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\refint\MyCoreApp.dll
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\MyCoreApp.pdb
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\MyCoreApp.genruntimeconfig.cache
+C:\Users\Truet\OneDrive - Arkansas Tech University\Office_Hours_Tracker\obj\Debug\net6.0\ref\MyCoreApp.dll
